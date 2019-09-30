@@ -10,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         try {
+            DBConnector.connectDb();
             UserRepository userRepository = new UserRepository();
             UserEntity userEntity = userRepository.findByLogin("Dandy");
             System.out.println(userEntity.toString());
